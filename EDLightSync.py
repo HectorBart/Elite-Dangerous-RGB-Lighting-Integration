@@ -6,7 +6,7 @@ import glob
 import os
 
 # access token (lifx)
-token = "c3e2baa631a995bbee3f1d567137dd4a437830530207b738dffd07b554b6b3a5"
+token = "ACCESS TOKEN" # add your lifx access token here
 
 # request header (lifx)
 headers = {
@@ -84,7 +84,7 @@ def flashRed():
 
 
 # get latest log
-list_of_files = glob.glob('C:/Users/hecto/Saved Games/Frontier Developments/Elite Dangerous/*.log')
+list_of_files = glob.glob('DIRECTORY\*.log') # change directory to your ED journal directory
 latest_file = max(list_of_files, key=os.path.getctime)
 print(latest_file)
 
