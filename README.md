@@ -19,6 +19,7 @@ This is still in development, bugs are still present and many features are to be
 6. Save the file
 7. In the lifx.py change to your LIFX access token (Use this page to find out how to get your access token: https://api.developer.lifx.com/docs/how-to-use-the-following-examples)
 8. Save the file
-9. Run the EDLightSync.py script
-10. Have fun!
+9. Run ED
+10. Once ED is in the menu run the EDLightSync.py script (I know this is not ideal - I am working on it!)
+11. Continue with your game and have fun!
 
