@@ -1,4 +1,4 @@
-# Elite-Dangerous-LIFX-Chroma-Integration
+# Elite-Dangerous-RGB-Lighting-Integration
 
 # What does it do?
 
