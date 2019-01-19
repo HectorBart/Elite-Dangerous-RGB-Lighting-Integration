@@ -81,3 +81,33 @@ def flashRed():
     }
 
     response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+    
+def flashYellow():
+
+    # lifx yellow
+    payload = {
+        "power": "on",
+        "color": "faff00",
+        "brightness": "1",
+        "fast": "true",
+    }
+
+    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+
+    # default
+    whiteDim()
+
+def flashBlue():
+
+    # lifx blue
+    payload = {
+        "power": "on",
+        "color": "0000ff",
+        "brightness": "1",
+        "fast": "true",
+    }
+
+    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+
+    # default
+    whiteDim()
