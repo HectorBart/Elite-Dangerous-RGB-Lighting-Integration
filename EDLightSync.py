@@ -88,6 +88,8 @@ dockedMusic = '"event":"Music", "MusicTrack":"Starport"'
 undocked = '"event":"Undocked"'
 dockGranted = '"event":"DockingGranted"'
 kill = '"event":"PVPKill"'
+supercruiseEnter = '"event":"SupercruiseEntry"'
+supercruiseExit = '"event":"SupercruiseExit"'
 
 
 ########################################################
@@ -131,6 +133,14 @@ while 0 < 1:
             elif dockGranted in lastLine or kill in lastLine:
 
                 flashGreen()
+                
+            elif supercruiseEnter in lastLine:
+
+                flashYellow()
+
+            elif supercruiseExit in lastLine:
+
+                flashBlue()
 
     # does nothing
     else:
