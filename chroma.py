@@ -32,3 +32,19 @@ def flashRed(app):
 
     # chroma
     app.Keyboard.setStatic(Colors.RED)
+    
+def flashYellow(app):
+
+    # chroma yellow
+    app.Keyboard.setStatic(Colors.YELLOW)
+
+    # default
+    whiteDim(app)
+
+def flashBlue(app):
+
+    # chroma blue
+    app.Keyboard.setStatic(Colors.BLUE)
+
+    # default
+    whiteDim(app)
