@@ -22,4 +22,4 @@ This is still in development, bugs are still present and many features are to be
 10. Once ED is in the menu run the EDLightSync.py script again (I know this is not ideal - I am working on it!).
 11. Continue with your game and have fun!
 
-Steps 1 to 8 are only required for setup however 10 to 12 are for every use.
+Steps 1 to 8 are only required for setup however 9 to 11 are for every use.
