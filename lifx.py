@@ -1,113 +1,121 @@
 # required modules
 import requests
+import config
 
-# access token
-token = "YOUR LIFX ACCESS TOKEN HERE" # CHANGE THIS
+if config.lifxEnable:
 
-# request header (lifx)
-headers = {
-    "Authorization": "Bearer %s" % token,
-}
+    # access token
+    token = config.lifxKey
 
-# lights
-
-def whiteBright():
-
-    # lifx white
-    payload = {
-        "power": "on",
-        "color": "ffffff",
-        "brightness": "1",
-        "fast": "true",
+    # request header (lifx)
+    headers = {
+        "Authorization": "Bearer %s" % token,
     }
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+    # lights
 
-def whiteDim():
+    def whiteBright():
 
-    # lifx white
-    payload = {
-        "power": "on",
-        "color": "ffffff",
-        "brightness": "0.3",
-        "fast": "true",
-    }
+        # lifx white
+        payload = {
+            "power": "on",
+            "color": "ffffff",
+            "brightness": "1",
+            "fast": "true",
+        }
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-def orange():
+    def whiteDim():
 
-    # lifx
-    payload = {
-        "power": "on",
-        "color": "ff9900",
-        "brightness": "1",
-        "fast": "true",
-    }
+        # lifx white
+        payload = {
+            "power": "on",
+            "color": "ffffff",
+            "brightness": "0.3",
+            "fast": "true",
+        }
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-def flashGreen():
+    def orange():
 
-    # lifx green
-    payload = {
-        "power": "on",
-        "color": "00ff00",
-        "brightness": "1",
-        "fast": "true",
-    }
+        # lifx
+        payload = {
+            "power": "on",
+            "color": "ff9900",
+            "brightness": "1",
+            "fast": "true",
+        }
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-    # default
-    whiteDim()
+    def flashGreen():
 
-def flashRed():
+        # lifx green
+        payload = {
+            "power": "on",
+            "color": "00ff00",
+            "brightness": "1",
+            "fast": "true",
+        }
 
-    # lifx red on
-    payload = {
-        "power": "on",
-        "color": "ff0000",
-        "brightness": "1",
-        "fast": "true",
-    }
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        # default
+        whiteDim()
 
-    # lifx off
-    payload = {
-        "power": "off",
-        "fast": "true",
-    }
+    def flashRed():
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
-    
-def flashYellow():
+        # lifx red on
+        payload = {
+            "power": "on",
+            "color": "ff0000",
+            "brightness": "1",
+            "fast": "true",
+        }
 
-    # lifx yellow
-    payload = {
-        "power": "on",
-        "color": "faff00",
-        "brightness": "1",
-        "fast": "true",
-    }
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        # lifx off
+        payload = {
+            "power": "off",
+            "fast": "true",
+        }
 
-    # default
-    whiteDim()
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-def flashBlue():
+    def flashYellow():
 
-    # lifx blue
-    payload = {
-        "power": "on",
-        "color": "0000ff",
-        "brightness": "1",
-        "fast": "true",
-    }
+        # lifx yellow
+        payload = {
+            "power": "on",
+            "color": "faff00",
+            "brightness": "1",
+            "fast": "true",
+        }
 
-    response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
-    # default
-    whiteDim()
+        # default
+        whiteDim()
+
+    def flashBlue():
+
+        # lifx blue
+        payload = {
+            "power": "on",
+            "color": "0000ff",
+            "brightness": "1",
+            "fast": "true",
+        }
+
+        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+
+        # default
+        whiteDim()
+
+    whiteBright()
+
+else:
+    print("LIFX Disabled")

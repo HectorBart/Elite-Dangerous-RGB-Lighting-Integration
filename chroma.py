@@ -1,50 +1,57 @@
-from ChromaPython import ChromaApp, ChromaAppInfo, ChromaColor, Colors, ChromaGrid
+import config
 
-KeyboardGrid = ChromaGrid("Keyboard")
+if config.chromaEnable:
 
-def whiteBright(app):
+    from ChromaPython import ChromaApp, ChromaAppInfo, ChromaColor, Colors, ChromaGrid
 
-    # chroma white
-    app.Keyboard.setStatic(Colors.WHITE)
+    KeyboardGrid = ChromaGrid("Keyboard")
 
-def whiteDim(app):
+    def whiteBright(app):
 
-    # chroma white
-    app.Keyboard.setStatic(Colors.WHITE)
+        # chroma white
+        app.Keyboard.setStatic(Colors.WHITE)
 
-def orange(app):
+    def whiteDim(app):
 
-    # chroma
-    global KeyboardGrid
-    KeyboardGrid.set(hexcolor="#ff9900")
-    app.Keyboard.setCustomGrid(KeyboardGrid)
-    app.Keyboard.applyGrid()
+        # chroma white
+        app.Keyboard.setStatic(Colors.WHITE)
 
-def flashGreen(app):
+    def orange(app):
 
-    # chroma
-    app.Keyboard.setStatic(Colors.GREEN)
+        # chroma orange
+        global KeyboardGrid
+        KeyboardGrid.set(hexcolor="#ff9900")
+        app.Keyboard.setCustomGrid(KeyboardGrid)
+        app.Keyboard.applyGrid()
 
-    # default
-    whiteDim(app)
+    def flashGreen(app):
 
-def flashRed(app):
+        # chroma green
+        app.Keyboard.setStatic(Colors.GREEN)
 
-    # chroma
-    app.Keyboard.setStatic(Colors.RED)
-    
-def flashYellow(app):
+        # default
+        whiteDim(app)
 
-    # chroma yellow
-    app.Keyboard.setStatic(Colors.YELLOW)
+    def flashRed(app):
 
-    # default
-    whiteDim(app)
+        # chroma red
+        app.Keyboard.setStatic(Colors.RED)
 
-def flashBlue(app):
+    def flashYellow(app):
 
-    # chroma blue
-    app.Keyboard.setStatic(Colors.BLUE)
+        # chroma yellow
+        app.Keyboard.setStatic(Colors.YELLOW)
 
-    # default
-    whiteDim(app)
+        # default
+        whiteDim(app)
+
+    def flashBlue(app):
+
+        # chroma blue
+        app.Keyboard.setStatic(Colors.BLUE)
+
+        # default
+        whiteDim(app)
+
+else:
+    print("Chroma Disabled")
