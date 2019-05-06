@@ -2,15 +2,15 @@
 ### CONFIG FILE FOR ELITE DANGEROUS LIGHT SYNC ###
 
 # ELITE DANGEROUS LOG FILES
-logLocation = "C:/Users/hecto/Saved Games/Frontier Developments/Elite Dangerous/*.log" # change to the location of your Elite Dangerous log files
+logLocation = "C:/...*.log" # change to the location of your Elite Dangerous log files
 
 # LIFX
-lifxEnable = True # change to True to enable LIFX
+lifxEnable = False # change to True to enable LIFX
 
-lifxKey = "cdf01810eae5ce8d50b22a459ffadcffa81c61b43de5f296b50474150811e23d" # change to your LIFX access token
+lifxKey = 000 # change to your LIFX access token
 
 # RAZER CHROMA
-chromaEnable = True # change to True to enable Razer Chroma
+chromaEnable = False # change to True to enable Razer Chroma
 
 # CORSAIR CUE
 cueEnable = False # change to True to enable Corsair Cue
