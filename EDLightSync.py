@@ -276,7 +276,7 @@ def start():
 
                                     whiteBright()
 
-                                elif shieldOn in lastLine or undocked or dockingMusic in lastLine:
+                                elif shieldOn in lastLine or undocked in lastLine or dockingMusic in lastLine:
 
                                     whiteDim()
 
